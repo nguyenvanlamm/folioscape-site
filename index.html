@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Folioscape: a calm bookshelf picture puzzle for iPhone</title>
+<meta name="description" content="Pull packed books, send each to its spot, and watch the spines paint a picture. 72 free bookcases, no ads, no timers. Coming soon for iPhone.">
+<link rel="canonical" href="https://nguyenvanlamm.github.io/folioscape-site/">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<meta name="theme-color" content="#6C5876">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Folioscape">
+<meta property="og:title" content="Folioscape: shelve every book, reveal the picture">
+<meta property="og:description" content="A calm bookshelf picture puzzle for iPhone. 72 free bookcases, no ads, no timers.">
+<meta property="og:url" content="https://nguyenvanlamm.github.io/folioscape-site/">
+<meta property="og:image" content="https://nguyenvanlamm.github.io/folioscape-site/assets/icon.png">
+<style>
+  @font-face { font-family: "Young Serif"; src: url(assets/fonts/young_serif_regular.ttf) format("truetype"); font-display: swap; }
+  @font-face { font-family: "Figtree"; src: url(assets/fonts/figtree_regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Figtree"; src: url(assets/fonts/figtree_semibold.ttf) format("truetype"); font-weight: 600; font-display: swap; }
+  :root {
+    --heather: #6C5876; --heather-light: #7F6B89; --ink: #2F2236; --ink2: #5A4860; --slip: #F3EDF2;
+    --card: #F4EEE4; --gilt: #E2BE63; --birch: #E6CFA3; --walnut: #7B5539; --line: #DCC8A3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--heather); color: var(--ink); font: 17px/1.6 "Figtree", system-ui, -apple-system, sans-serif; }
+  a { color: inherit; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+  header.hero { background: radial-gradient(120% 90% at 50% 20%, var(--heather-light), var(--heather)); color: var(--slip); }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; padding-top: 56px; padding-bottom: 64px; }
+  .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .brand img { width: 48px; height: 48px; border-radius: 11px; }
+  .brand span { font-family: "Young Serif", Georgia, serif; font-size: 24px; }
+  h1, h2, h3 { font-family: "Young Serif", Georgia, serif; font-weight: 400; line-height: 1.15; margin: 0; }
+  h1 { font-size: clamp(36px, 6vw, 56px); }
+  .hero p.sub { font-size: 19px; max-width: 32em; margin: 18px 0 28px; color: #EDE4EF; }
+  .cta { display: inline-block; background: var(--gilt); color: var(--ink); font-weight: 600; padding: 14px 22px; border-radius: 14px; box-shadow: 0 3px 8px rgba(27,15,31,.3); }
+  .note { font-size: 14px; color: #E2D8E5; margin-top: 12px; }
+  .phone { justify-self: center; width: min(300px, 80vw); border-radius: 36px; padding: 10px; background: #2A1A30; box-shadow: 0 18px 40px rgba(27,15,31,.45); }
+  .phone img { display: block; width: 100%; height: auto; border-radius: 28px; }
+  main { background: var(--card); }
+  section { padding: 64px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  h2 { font-size: clamp(28px, 4vw, 36px); margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .tile { background: #FFFDF8; border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .tile h3 { font-size: 22px; margin-bottom: 8px; }
+  .tile p { margin: 0; color: var(--ink2); }
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; display: grid; gap: 16px; }
+  ol.steps li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+  ol.steps li::before { content: counter(s); font-family: "Young Serif", Georgia, serif; font-size: 22px; width: 44px; height: 44px; border-radius: 50%; background: var(--heather); color: var(--slip); display: grid; place-items: center; }
+  .tools { margin-top: 20px; color: var(--ink2); }
+  table { width: 100%; border-collapse: collapse; background: #FFFDF8; border-radius: 12px; overflow: hidden; }
+  td, th { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; }
+  details { background: #FFFDF8; border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--ink2); }
+  footer { background: var(--heather); color: var(--slip); padding: 28px 0; font-size: 15px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
+  footer nav a { margin-right: 18px; }
+  @media (max-width: 760px) {
+    .hero .wrap { grid-template-columns: 1fr; padding-top: 36px; }
+    .grid { grid-template-columns: 1fr; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><img src="assets/icon.png" alt="" width="48" height="48"><span>Folioscape</span></div>
+      <h1>Shelve every book. Reveal the picture.</h1>
+      <p class="sub">A calm puzzle for iPhone. Each bookcase hides a faint painting on its back panel; put every book in its own spot and the spines finish it.</p>
+      <span class="cta">Coming soon to the App Store</span>
+      <p class="note">72 bookcases free · no ads · no timers · plays offline</p>
+    </div>
+    <div class="phone"><img src="assets/screen-game.png" alt="A Folioscape bookcase: packed shelves of cloth-bound books over a faint picture, a book cart below and three tool cards" width="390" height="844"></div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>A bookcase that thinks back</h2>
+      <div class="grid">
+        <div class="tile"><h3>Packed shelves, real choices</h3><p>You can only pull a book from the end of a shelf, beside a gap, or beside a book already home. The book cart holds just a few, so the order of your pulls matters.</p></div>
+        <div class="tile"><h3>A picture in every case</h3><p>The back panel shows the picture faintly; every book that goes home paints in a little more. When the last one lands, the reading lamp switches on.</p></div>
+        <div class="tile"><h3>Six rooms, 72 bookcases</h3><p>From the Reading Nook to the Observatory. Later rooms add dividers and thick books; finishing eight bookcases opens the next room.</p></div>
+        <div class="tile"><h3>Your own pace</h3><p>No timers, lives or energy. A library date-due slip counts your pulls, and finishing within par earns an “On time” stamp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How to play</h2>
+      <ol class="steps">
+        <li><div><strong>Tap a book you can reach.</strong> Books at a shelf end, beside a gap or beside a book already home tip forward to show they can move.</div></li>
+        <li><div><strong>Watch it fly home.</strong> Neighbours of the same colour come along and go to their own spots; books with nowhere to go yet wait on the cart.</div></li>
+        <li><div><strong>Fill every spot.</strong> The spines complete the picture and the lamp lights the finished case.</div></li>
+      </ol>
+      <p class="tools">Stuck? A <strong>Bookmark</strong> takes back a pull, a <strong>Step Stool</strong> reaches any one book, and an <strong>Extra Cart</strong> adds two cart spaces. You earn tools as you finish bookcases.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Fair play</h2>
+      <p>The 72 bookcases of the six rooms are free and complete. Everything else is optional, and prices come from the App Store:</p>
+      <table>
+        <tr><th>Rare Books Wing</th><td>24 more bookcases with larger pictures. Bought once.</td></tr>
+        <tr><th>Quiet Hours</th><td>The cart never fills, so no shelf gets stuck. A switch in Settings. Bought once.</td></tr>
+        <tr><th>Book Tote</th><td>A pack of Bookmarks, Step Stools and Extra Carts. Buy it as often as you like.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Questions</h2>
+      <details><summary>Are there ads?</summary><p>No. No ads, no analytics, no account.</p></details>
+      <details><summary>Does it play offline?</summary><p>Yes, the whole game plays offline. Only buying or restoring a purchase needs the App Store.</p></details>
+      <details><summary>How do I restore a purchase on a new iPhone?</summary><p>Open Settings → Restore Purchases. The Rare Books Wing and Quiet Hours come back on any device signed in to the same Apple Account.</p></details>
+      <details><summary>What happens to my data?</summary><p>Your progress stays on your iPhone; the game collects nothing. See the <a href="privacy.html">privacy policy</a>.</p></details>
+      <details><summary>What if a bookcase gets stuck?</summary><p>Use a tool, start the bookcase over, or turn on Quiet Hours if you have it. Nothing is lost by trying again.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+    <span>© 2026 Nguyen Van Lam</span>
+  </div>
+</footer>
+</body>
+</html>
