@@ -7,14 +7,81 @@
 <meta name="description" content="Pull packed books, send each to its spot, and watch the spines paint a picture. 72 free bookcases, no ads, no timers. Coming soon for iPhone.">
 <link rel="canonical" href="https://nguyenvanlamm.github.io/folioscape-site/">
 <link rel="icon" href="assets/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preload" href="assets/fonts/young_serif_regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="theme-color" content="#6C5876">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Folioscape">
 <meta property="og:title" content="Folioscape: shelve every book, reveal the picture">
 <meta property="og:description" content="A calm bookshelf picture puzzle for iPhone. 72 free bookcases, no ads, no timers.">
 <meta property="og:url" content="https://nguyenvanlamm.github.io/folioscape-site/">
-<meta property="og:image" content="https://nguyenvanlamm.github.io/folioscape-site/assets/icon.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://nguyenvanlamm.github.io/folioscape-site/assets/share-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Folioscape: Shelve every book. Reveal the picture. A calm bookshelf picture puzzle for iPhone, coming soon to the App Store.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Folioscape: shelve every book, reveal the picture">
+<meta name="twitter:description" content="A calm bookshelf picture puzzle for iPhone. 72 free bookcases, no ads, no timers.">
+<meta name="twitter:image" content="https://nguyenvanlamm.github.io/folioscape-site/assets/share-card.png">
+<meta name="twitter:image:alt" content="Folioscape: Shelve every book. Reveal the picture. A calm bookshelf picture puzzle for iPhone, coming soon to the App Store.">
+<meta name="author" content="Luong NGUYEN">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://nguyenvanlamm.github.io/folioscape-site/#website",
+      "name": "Folioscape",
+      "url": "https://nguyenvanlamm.github.io/folioscape-site/",
+      "inLanguage": "en",
+      "description": "Official site of Folioscape, a calm bookshelf picture puzzle for iPhone.",
+      "publisher": { "@id": "https://nguyenvanlamm.github.io/folioscape-site/#developer" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nguyenvanlamm.github.io/folioscape-site/#developer",
+      "name": "Luong NGUYEN",
+      "email": "lamnv260398@gmail.com"
+    },
+    {
+      "@type": ["VideoGame", "MobileApplication"],
+      "@id": "https://nguyenvanlamm.github.io/folioscape-site/#game",
+      "name": "Folioscape",
+      "url": "https://nguyenvanlamm.github.io/folioscape-site/",
+      "description": "A calm bookshelf picture puzzle for iPhone, coming soon to the App Store. Shelves are packed: pull a book only from a shelf end, beside a gap, or beside a book already home. Same-colour neighbours come out together, extra books wait on a small cart, and each bookcase hides a faint picture that the spines complete. Six rooms of 12 bookcases: 72 free bookcases.",
+      "image": "https://nguyenvanlamm.github.io/folioscape-site/assets/share-card.png",
+      "screenshot": "https://nguyenvanlamm.github.io/folioscape-site/assets/screen-game.png",
+      "applicationCategory": "Game",
+      "applicationSubCategory": "Puzzle",
+      "genre": ["Puzzle", "Casual"],
+      "gamePlatform": "iPhone",
+      "operatingSystem": "iOS 15 or later",
+      "playMode": "SinglePlayer",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "author": { "@id": "https://nguyenvanlamm.github.io/folioscape-site/#developer" },
+      "publisher": { "@id": "https://nguyenvanlamm.github.io/folioscape-site/#developer" },
+      "featureList": [
+        "72 free bookcases in six rooms",
+        "No ads, no analytics, no account",
+        "Plays offline",
+        "No timers, lives or energy"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "category": "free",
+        "description": "Free to play: all 72 bookcases of the six rooms. Optional in-app purchases: Rare Books Wing (24 more bookcases), Quiet Hours (the cart never fills) and Book Tote (a tool pack). Coming soon to the App Store."
+      },
+      "isPartOf": { "@id": "https://nguyenvanlamm.github.io/folioscape-site/#website" }
+    }
+  ]
+}
+</script>
 <style>
   @font-face { font-family: "Young Serif"; src: url(assets/fonts/young_serif_regular.ttf) format("truetype"); font-display: swap; }
   @font-face { font-family: "Figtree"; src: url(assets/fonts/figtree_regular.ttf) format("truetype"); font-weight: 400; font-display: swap; }
@@ -26,6 +93,9 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--heather); color: var(--ink); font: 17px/1.6 "Figtree", system-ui, -apple-system, sans-serif; }
   a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--heather); outline-offset: 3px; border-radius: 4px; }
+  header :focus-visible, footer :focus-visible { outline-color: var(--gilt); }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
   header.hero { background: radial-gradient(120% 90% at 50% 20%, var(--heather-light), var(--heather)); color: var(--slip); }
   .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; padding-top: 56px; padding-bottom: 64px; }
@@ -34,9 +104,9 @@
   .brand span { font-family: "Young Serif", Georgia, serif; font-size: 24px; }
   h1, h2, h3 { font-family: "Young Serif", Georgia, serif; font-weight: 400; line-height: 1.15; margin: 0; }
   h1 { font-size: clamp(36px, 6vw, 56px); }
-  .hero p.sub { font-size: 19px; max-width: 32em; margin: 18px 0 28px; color: #EDE4EF; }
+  .hero p.sub { font-size: 19px; max-width: 32em; margin: 18px 0 28px; color: var(--slip); }
   .cta { display: inline-block; background: var(--gilt); color: var(--ink); font-weight: 600; padding: 14px 22px; border-radius: 14px; box-shadow: 0 3px 8px rgba(27,15,31,.3); }
-  .note { font-size: 14px; color: #E2D8E5; margin-top: 12px; }
+  .note { font-size: 14px; color: var(--slip); margin-top: 12px; }
   .phone { justify-self: center; width: min(300px, 80vw); border-radius: 36px; padding: 10px; background: #2A1A30; box-shadow: 0 18px 40px rgba(27,15,31,.45); }
   .phone img { display: block; width: 100%; height: auto; border-radius: 28px; }
   main { background: var(--card); }
@@ -59,6 +129,8 @@
   details p { margin: 10px 0 0; color: var(--ink2); }
   footer { background: var(--heather); color: var(--slip); padding: 28px 0; font-size: 15px; }
   footer .wrap { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
+  footer .wrap { align-items: center; }
+  footer a { display: inline-block; padding: 10px 0; }
   footer nav a { margin-right: 18px; }
   @media (max-width: 760px) {
     .hero .wrap { grid-template-columns: 1fr; padding-top: 36px; }
@@ -71,13 +143,13 @@
 <header class="hero">
   <div class="wrap">
     <div>
-      <div class="brand"><img src="assets/icon.png" alt="" width="48" height="48"><span>Folioscape</span></div>
+      <div class="brand"><img src="assets/icon-96.png" alt="" width="48" height="48"><span>Folioscape</span></div>
       <h1>Shelve every book. Reveal the picture.</h1>
       <p class="sub">A calm puzzle for iPhone. Each bookcase hides a faint painting on its back panel; put every book in its own spot and the spines finish it.</p>
       <span class="cta">Coming soon to the App Store</span>
       <p class="note">72 bookcases free · no ads · no timers · plays offline</p>
     </div>
-    <div class="phone"><img src="assets/screen-game.png" alt="A Folioscape bookcase: packed shelves of cloth-bound books over a faint picture, a book cart below and three tool cards" width="390" height="844"></div>
+    <div class="phone"><img src="assets/screen-game.webp" decoding="async" alt="A Folioscape bookcase: packed shelves of cloth-bound books over a faint picture, a book cart below and three tool cards" width="390" height="844"></div>
   </div>
 </header>
 
@@ -111,9 +183,10 @@
       <h2>Fair play</h2>
       <p>The 72 bookcases of the six rooms are free and complete. Everything else is optional, and prices come from the App Store:</p>
       <table>
-        <tr><th>Rare Books Wing</th><td>24 more bookcases with larger pictures. Bought once.</td></tr>
-        <tr><th>Quiet Hours</th><td>The cart never fills, so no shelf gets stuck. A switch in Settings. Bought once.</td></tr>
-        <tr><th>Book Tote</th><td>A pack of Bookmarks, Step Stools and Extra Carts. Buy it as often as you like.</td></tr>
+        <caption class="visually-hidden">Optional in-app purchases</caption>
+        <tr><th scope="row">Rare Books Wing</th><td>24 more bookcases with larger pictures. Bought once.</td></tr>
+        <tr><th scope="row">Quiet Hours</th><td>The cart never fills, so no shelf gets stuck. A switch in Settings. Bought once.</td></tr>
+        <tr><th scope="row">Book Tote</th><td>A pack of Bookmarks, Step Stools and Extra Carts. Buy it as often as you like.</td></tr>
       </table>
     </div>
   </section>
@@ -132,8 +205,8 @@
 
 <footer>
   <div class="wrap">
-    <nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
-    <span>© 2026 Nguyen Van Lam</span>
+    <nav aria-label="Site"><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
+    <span>© 2026 Luong NGUYEN · <a href="mailto:lamnv260398@gmail.com">lamnv260398@gmail.com</a></span>
   </div>
 </footer>
 </body>

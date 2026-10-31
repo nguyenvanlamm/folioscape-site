@@ -1,0 +1,44 @@
+# Folioscape site: everything is public, search engines and AI bots are welcome.
+# Note: on GitHub Pages crawlers read https://nguyenvanlamm.github.io/robots.txt (the user-site root);
+# this file mirrors the policy for the project path and for agent scanners.
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://nguyenvanlamm.github.io/folioscape-site/sitemap.xml
