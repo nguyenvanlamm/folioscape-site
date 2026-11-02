@@ -2,7 +2,7 @@
 
 > Folioscape is a calm bookshelf picture puzzle for iPhone (iOS 15 or later), coming soon to the App Store. Developer: Luong Nguyen.
 
-Shelves are packed. You can pull a book only from the end of a shelf, beside a gap, or beside a book already home. Neighbours of the same colour come out together and go to their own spots; extra books wait on a small book cart. Each bookcase hides a faint picture on its back panel, and the spines complete it as the books go home.
+Shelves are packed. You can pull a book only from the end of a shelf, beside a gap, or beside a book already home. The player picks a book, then which free spot of its colour it goes to; books with nowhere to go yet wait on a small book cart. Each bookcase hides a faint picture on its back panel, and the spines complete it as the books go home.
 
 - Six rooms of 12 bookcases: 72 bookcases, all free.
 - Optional in-app purchases: Rare Books Wing (24 more bookcases), Quiet Hours (the cart never fills) and Book Tote (a pack of tools: Bookmark, Step Stool, Extra Cart).
